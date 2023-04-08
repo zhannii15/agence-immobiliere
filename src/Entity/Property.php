@@ -38,7 +38,11 @@ class Property
         2=>'Moquette',
         3=>'Sol souple',
     ];
-
+    const PARKING =[
+        0=>'Non',
+        1=>'Oui',
+    ];
+    
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
@@ -232,6 +236,11 @@ class Property
     public function getParking(): ?int
     {
         return $this->parking;
+    }
+
+    public function getParkingType(): string 
+    {
+        return self::PARKING[$this->parking];
     }
 
     public function setParking(int $parking): self

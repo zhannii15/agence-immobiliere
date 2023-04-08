@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Recherche de propriété{% endblock %}
+
+{% block body %}
+
+  <main id="main">
+    {# Intro Single => Introduction pour vvoir le détail du propriété #}
+      {{include('property/partialsProperty/IntroSingleShow.html.twig')}}
+ 
+    {# propertySingle => partie d'affichage détaillée du propriété  #}
+      {{include('property/partialsProperty/PropertySingle.html.twig')}}
+  </main>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+

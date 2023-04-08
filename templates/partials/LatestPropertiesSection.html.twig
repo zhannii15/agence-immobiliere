@@ -7,7 +7,7 @@
                         <h2 class="title-a">Dernières propriétes</h2>
                     </div>
                     <div class="title-link">
-                        <a href="property-grid.html">Voir toutes les annonces
+                        <a href="{{path('app_property')}}">Voir toutes les annonces
                             <span class="bi bi-chevron-right"></span>
                         </a>
                     </div>
@@ -26,7 +26,7 @@
                                 <div class="card-overlay-a-content">
                                     <div class="card-header-a">
                                         <h2 class="card-title-a">
-                                            <a href="property-single.html">{{prop.StatusType}}
+                                            <a href="{{path('property_single',{id:prop.id})}}">{{prop.StatusType}}
                                             <br /> {{prop.title}}</a>
                                         </h2>
                                     </div>
@@ -34,7 +34,7 @@
                                         <div class="price-box d-flex">
                                             <span class="price-a">{{prop.TypeType}} |{{prop.formattedPrice}} €</span>
                                         </div>
-                                        <a href="#" class="link-a">Cliquez ici pour voir
+                                        <a href="{{path('property_single',{id:prop.id})}}" class="link-a">Cliquez ici pour voir
                                             <span class="bi bi-chevron-right"></span>
                                         </a>
                                     </div>

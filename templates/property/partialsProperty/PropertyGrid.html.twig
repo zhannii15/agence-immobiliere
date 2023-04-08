@@ -1,0 +1,63 @@
+ <!-- ======= Por voir toutes les propriétés ======= -->
+<section class="property-grid grid">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+      </div>
+      {% if propertie is not empty %}
+        {% for prop in propertie %}
+          <div class="col-md-4">
+            <div class="card-box-a card-shadow">
+              <div class="img-box-a">
+                <img src="assets/img/property-1.jpg" alt="" class="img-a img-fluid">
+              </div>
+              <div class="card-overlay">
+                <div class="card-overlay-a-content">
+                  <div class="card-header-a">
+                    <h2 class="card-title-a">
+                      <a href="#">{{prop.StatusType}}
+                        <br />{{prop.title}}</a>
+                    </h2>
+                  </div>
+                  <div class="card-body-a">
+                    <div class="price-box d-flex">
+                      <span class="price-a">{{prop.TypeType}} |{{prop.formattedPrice}} €</span>
+                    </div>
+                    <a href="{{path('property_single',{id:prop.id})}}" class="link-a">Click here to view
+                      <span class="bi bi-chevron-right"></span>
+                    </a>
+                  </div>
+                  <div class="card-footer-a">
+                    <ul class="card-info d-flex justify-content-around">
+                      <li>
+                        <h4 class="card-info-title">Surface</h4>
+                        <span>{{prop.surface}}m
+                          <sup>2</sup>
+                        </span>
+                      </li>
+                      <li>
+                        <h4 class="card-info-title">Piéces</h4>
+                        <span>{{prop.rooms}}</span>
+                      </li>
+                      <li>
+                        <h4 class="card-info-title">Chambres</h4>
+                        <span>{{prop.bedrooms}}</span>
+                      </li>
+                      <li>
+                        <h4 class="card-info-title">Baths</h4>
+                        <span>4</span>
+                      </li>
+                      <li>
+                        <h4 class="card-info-title">parking</h4>
+                        <span>{{prop.ParkingType}}</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+       {% endfor %}
+    {% endif %}
+  </div>
+</section>
